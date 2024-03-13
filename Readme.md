@@ -28,23 +28,19 @@ L'interface `Echiquier` est facultative. Elle n'es présente que pour abstraire 
 
 ```mermaid
 classDiagram
-interface JPlateau {
+class JPlateau {
 	+obtenir()
 	+deplacer()	
 }
-interface SPlateau {
+class SPlateau {
 	+void initialiser();
 	+extraire();
 	+disposer();
 }
-interface Echiquier {
+class Echiquier {
 	+getSPlateau()
 	+getJPlateau()
 }
-A-->B;
-A-->C;
-B-->D;
-C-->D;
 ```
 ## Question 2
 
