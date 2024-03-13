@@ -33,11 +33,11 @@ class JPlateau {
 	+deplacer()	
 }
 class SPlateau {
-	+void initialiser();
-	+extraire();
-	+disposer();
+	+initialiser()
+	+extraire()
+	+disposer()
 }
-class Echiquier {
+interface Echiquier {
 	+getSPlateau()
 	+getJPlateau()
 }
