@@ -12,8 +12,8 @@ import echiquier.plateau.Echiquier;
 
 public class DelegatingEchiquierFromImpl implements Echiquier {
 	
-	private SPlateau plateauSuperviseur;
-	private JPlateau plateauJoueur;
+	private SPlateau plateauSuperviseur = new EchiquierSuperviseurAdapter();
+	private JPlateau plateauJoueur = new EchiquierJoueurAdapter();
 	
 	private UnEchiquierImpl autreEchiquier;
 	
@@ -35,7 +35,7 @@ public class DelegatingEchiquierFromImpl implements Echiquier {
 		}
 	}
 	
-	private class EchiquierJoueurAdapteur implements JPlateau {
+	private class EchiquierJoueurAdapter implements JPlateau {
 
 		@Override
 		public Piece obtenir(Coordonnees coordonnees) {
@@ -47,11 +47,6 @@ public class DelegatingEchiquierFromImpl implements Echiquier {
 			autreEchiquier.move();
 		}
 		
-	}
-	
-	public DelegatingEchiquierFromImpl() {
-		plateauJoueur = new EchiquierJoueurAdapteur();
-		plateauSuperviseur = new EchiquierSuperviseurAdapter();
 	}
 	
 	public SPlateau getSPlateau() {

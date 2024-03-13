@@ -9,6 +9,8 @@ import echiquier.roles.Superviseur;
 public class MainQ2 {
 	
 	public static void main(String[] args) {
+//		Echiquier echiquier = new ImplementingEchiquier();
+//		Echiquier echiquier = new DelegatingEchiquier();
 		Echiquier echiquier = new DelegatingEchiquierFromImpl();
 		
 		Joueur joueur1 = new Joueur(echiquier.getJPlateau());
