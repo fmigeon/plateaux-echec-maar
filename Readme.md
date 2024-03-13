@@ -27,7 +27,7 @@ Lors de la définition des rôles Joueur et Superviseur, on y constate clairemen
 L'interface `Echiquier` est facultative. Elle n'es présente que pour abstraire la définition de l'échiquier par rapport aux implantations proposées. 
 
 ```mermaid
-classDiagram;
+classDiagram
 interface JPlateau {
 	+obtenir()
 	+deplacer()	
