@@ -11,6 +11,8 @@ Les trois premières méthodes sont utilisées (invoquées) par un « superv
 Un échiquier est un plateau de 8x8 cases. Sur une case, il peut y avoir une pièce de type ROI, REINE, FOU, CAVALIER, TOUR, PION ou bien la case peut être VIDE.
 La société M1-DEVELOPPEMENT est chargée de la conception et de la réalisation en Java d’une application qui permet à deux joueurs de s’affronter aux échecs sous le contrôle d’un superviseur. Au déploiement, l’application doit créer deux objets joueurs instances d’une classe `Joueur`, un objet superviseur instance d’une classe `Superviseur` et un objet échiquier.
 
+Ci-dessous les questions posées et les éléments de solutions proposés sont exposés.
+
 ## Question 1
 
 > Concevoir l’application de telle sorte que joueurs et superviseur aient seulement accès aux méthodes du plateau qui les concerne. Donner le diagramme de classes (classes Joueur, Superviseur...) avec les éléments de code utiles. Donner le code de configuration.
@@ -40,8 +42,9 @@ La classe `DelegatingEchiquierFromImpl` reprend la structure de la classe `Deleg
 
 On remarque dans `MainQ2` que l'utilisation de l'une ou l'autre des 3 implantations réalisées est complètement transparente.
 
-Le diagramme suivant donne résume la proposition solvant la question 2 :
-![](//www.plantuml.com/plantuml/png/dLHDRzim33rRluB8gOEROZjl25gqEzId0i5-W2ApBJ5PyYWg6BRblyyVBYCWMvVr9ehYUu_aiw-JM9RSUPE-KkWjsmwSjodTY33jik2zYs5BFn3U6qD1a1-jGtWWT0W_JRMBqQCDiBUUMhp3tW_f3eDStCR8RGm1CS4Zn-uIoXk9xpwQGmdPF7WhQFE8EiF7dM0WBf707Sy3GBMFr48xi_8Pb9Kv59HRfLoGA92GzPG6i3jAVKn370Eqn_F8UXkzHpT6doQb6m3yBco9yK9LpJMl0fLQFhjd-fO9UOJ2q2OTo6MXipAL1ayeB-U9jIaIJP4uc6cZqCICcM69jhb7tbF2pCOigVLw0wiFiExdua4IkhHI8KPh_lfMfPhxhlUJ4IWy7Nkxklgr0GtDekLBqAknR5n7hVkOUgjFHZvFt2rfdRWLzpnVgOSiXU9H5_SuJsKXL-gYkvlMze8CzD94qiPKtBbcgV_bblfSkvnARcB-izgcL7lsrrJ_x-SqIdfbVceIcuLH7wvE5cxAZjvIVusX7VzYlm40)
+Le diagramme suivant résume la proposition solvant la question 2 :
+
+![](https://www.plantuml.com/plantuml/png/dLHDRzim33rRluB8gOEROZjl25gqEzId0i5-W2ApBJ5PyYWg6BRblyyVBYCWMvVr9ehYUu_aiw-JM9RSUPE-KkWjsmwSjodTY33jik2zYs5BFn3U6qD1a1-jGtWWT0W_JRMBqQCDiBUUMhp3tW_f3eDStCR8RGm1CS4Zn-uIoXk9xpwQGmdPF7WhQFE8EiF7dM0WBf707Sy3GBMFr48xi_8Pb9Kv59HRfLoGA92GzPG6i3jAVKn370Eqn_F8UXkzHpT6doQb6m3yBco9yK9LpJMl0fLQFhjd-fO9UOJ2q2OTo6MXipAL1ayeB-U9jIaIJP4uc6cZqCICcM69jhb7tbF2pCOigVLw0wiFiExdua4IkhHI8KPh_lfMfPhxhlUJ4IWy7Nkxklgr0GtDekLBqAknR5n7hVkOUgjFHZvFt2rfdRWLzpnVgOSiXU9H5_SuJsKXL-gYkvlMze8CzD94qiPKtBbcgV_bblfSkvnARcB-izgcL7lsrrJ_x-SqIdfbVceIcuLH7wvE5cxAZjvIVusX7VzYlm40)
 
 ## Question 3
 
