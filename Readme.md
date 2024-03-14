@@ -26,6 +26,10 @@ Lors de la définition des rôles Joueur et Superviseur, on y constate clairemen
 
 L'interface `Echiquier` est facultative. Elle n'es présente que pour abstraire la définition de l'échiquier par rapport aux implantations proposées. 
 
+Voici un diagramme de classes UML résumant la solution : 
+
+![](https://www.plantuml.com/plantuml/png/SoWkIImgAStDuIhEpimhI2nAp5L8paaiBdOiAIdAJ2ejIVLCpiyBpgnALJ3W0aiek9JcvbOgL7CfwAPbfkQa678fA8CPHbmATRcf9HdvAOOQcbmAsX2s4P1To-MGcfS2j0G0)
+
 ```mermaid
 classDiagram
 class JPlateau {
