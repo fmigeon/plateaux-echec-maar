@@ -1,0 +1,49 @@
+@startuml
+skinparam classAttributeIconSize 0
+
+interface Piece {
+	boolean valideDeplacement(Coordonnees from, Coordonnees to);
+}
+
+interface JPlateau {
+	Piece obtenir(Coordonnees coordonnees);
+	void deplacer(Coordonnees from, Coordonnees to);	
+}
+interface SPlateau {
+	void initialiser(Disposition disposition);
+	Collection<Piece>  extraire();
+	void disposer(Disposition disposition);
+}
+interface Echiquier extends JPlateau, SPlateau {	
+	SPlateau getSPlateau();
+	JPlateau getJPlateau();
+}
+class Joueur 
+class Superviseur
+
+Joueur --> "1 -plateauEchecs" JPlateau
+Superviseur --> "1 -plateauEchecs" SPlateau
+ImplementingEchiquier ..|> Echiquier
+
+class UnEchiquierImpl {
+	+void init();
+	+Collection<Piece> extract();
+	+void dispatch();
+	+Piece obtain();
+	+void move();
+}
+
+class EchiquierSuperviseurAdapter implements SPlateau {
+	+void initialiser(Disposition disposition);
+	+Collection<Piece>  extraire();
+	+void disposer(Disposition disposition);
+}
+
+class EchiquierJoueurAdapter implements JPlateau {
+	+Piece obtenir(Coordonnees coordonnees);
+	+void deplacer(Coordonnees from, Coordonnees to);
+}
+
+EchiquierSuperviseurAdapter --> "1 -autreEchiquier" UnEchiquierImpl 
+EchiquierJoueurAdapter --> "1 -autreEchiquier" UnEchiquierImpl 
+@enduml
