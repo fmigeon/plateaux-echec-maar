@@ -1,4 +1,3 @@
-@startuml
 skinparam classAttributeIconSize 0
 
 interface Piece {
@@ -24,4 +23,3 @@ class Superviseur
 Joueur --> "1 -plateauEchecs" JPlateau
 Superviseur --> "1 -plateauEchecs" SPlateau
 ImplementingEchiquier ..|> Echiquier
-@enduml
