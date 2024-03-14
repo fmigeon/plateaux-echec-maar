@@ -1,7 +1,27 @@
+@startuml
 skinparam classAttributeIconSize 0
-class Dummy {
- -field1
- #field2
- ~method1()
- +method2()
+
+interface Piece {
+	boolean valideDeplacement(Coordonnees from, Coordonnees to);
 }
+
+interface JPlateau {
+	Piece obtenir(Coordonnees coordonnees);
+	void deplacer(Coordonnees from, Coordonnees to);	
+}
+interface SPlateau {
+	void initialiser(Disposition disposition);
+	Collection<Piece>  extraire();
+	void disposer(Disposition disposition);
+}
+interface Echiquier extends JPlateau, SPlateau {	
+	SPlateau getSPlateau();
+	JPlateau getJPlateau();
+}
+class Joueur 
+class Superviseur
+
+Joueur --> "1 -plateauEchecs" JPlateau
+Superviseur --> "1 -plateauEchecs" SPlateau
+ImplementingEchiquier ..|> Echiquier
+@enduml

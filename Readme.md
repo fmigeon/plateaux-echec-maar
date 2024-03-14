@@ -28,24 +28,8 @@ L'interface `Echiquier` est facultative. Elle n'es présente que pour abstraire 
 
 Voici un diagramme de classes UML résumant la solution : 
 
-![](https://www.plantuml.com/plantuml/png/SoWkIImgAStDuIhEpimhI2nAp5L8paaiBdOiAIdAJ2ejIVLCpiyBpgnALJ3W0aiek9JcvbOgL7CfwAPbfkQa678fA8CPHbmATRcf9HdvAOOQcbmAsX2s4P1To-MGcfS2j0G0)
+![](https://www.plantuml.com/plantuml/png/ZPBDJiCm48JFyLEiUYfIMy4PL1Mr79fJfJw1Qs_B2iSRrdQ5WBux-Ic9EO2uH3kPx3UJnAiGjSHKEHLUoDTQT0N6wH0UOnGwf8XRmtvFxmYtIf6FA4Tj47Q4pVL35GTcXzh3MJkokC7QDNQ5FaxNp6BPUyG0H-5g1lcTo3Vtwf8ZovtJ4NLggJsU3n4zoG-I6US6K9oPBDW-LVuHMQXB5hdF8ZiIUOga7OK6jg5GSsWqUx3ZtAQksJaqhNhecYu1y2sA9i7fsAhR-HEKTtaop_IQ2AL5eRTX-22ph6UXYa6SC7xFNMgP6MLcN5JtHw7aX4dWglQfHZbJm2HANQtvV0cJEvZN_N9J2KsO34NKkFFRiqDLjQrgrnq4ygVntHQBpoKCKgtGs_RmVG40)
 
-```mermaid
-classDiagram
-class JPlateau {
-	+obtenir()
-	+deplacer()	
-}
-class SPlateau {
-	+initialiser()
-	+extraire()
-	+disposer()
-}
-interface Echiquier {
-	+getSPlateau()
-	+getJPlateau()
-}
-```
 ## Question 2
 
 > Supposons maintenant que la société M1-DEVELOPPEMENT ait choisi d’utiliser une implantation d’un échiquier précédemment développée dans le cadre d’un autre projet : cette implantation est définie par la classe UnEchiquierImpl qui offre les méthodes d’un plateau. Sachant que la société M1- DEVELOPPEMENT s’interdit toute modification de l’existant, en particulier les classes Joueur, Superviseur et UnEchiquierImpl, proposer une solution de conception qui respecte les contraintes d’accès au plateau (méthodes réservées au superviseur ou réservées au joueur). Donner le diagramme de classes avec les éléments de code utiles. Donner le code de configuration.
