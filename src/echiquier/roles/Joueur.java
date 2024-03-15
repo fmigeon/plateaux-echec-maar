@@ -1,5 +1,6 @@
 package echiquier.roles;
 
+import common.plateau.Coordonnees;
 import common.plateau.JPlateau;
 
 public class Joueur {
@@ -11,5 +12,17 @@ public class Joueur {
 		this.plateauEchecs = plateauEchecs;
 	}
 	
-	
+	public void play() {
+		Coordonnees startCoordinates = startCoordinatesChoice();
+		Coordonnees endCoordinates = endCoordinatesChoice();
+		plateauEchecs.deplacer(startCoordinates, endCoordinates);
+	}
+
+	private Coordonnees endCoordinatesChoice() {
+		return null;
+	}
+
+	private Coordonnees startCoordinatesChoice() {
+		return null;
+	}
 }

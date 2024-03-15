@@ -17,5 +17,9 @@ public class MainQ1 {
 		
 		Superviseur superviseur = new Superviseur(echiquier.getSPlateau());
 		
+		joueur1.play();
+		joueur2.play();
+		joueur2.play();
+		
 	}
 }
