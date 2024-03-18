@@ -49,3 +49,6 @@ Le diagramme suivant résume la proposition solvant la question 2 :
 ## Question 3
 
 > On veut maintenant contrôler le jeu des pièces en fonction de leur couleur : au premier coup, on n’autorise que le déplacement d’une pièce blanche, au second seulement celui d’une pièce noire, au troisième celui d’une pièce blanche, et ainsi de suite. Quelle solution permet d’intégrer ce contrôle à l’application sans modifier l’existant ? Pour simplifier, on suppose que si un déplacement n’est pas autorisé, l’opération est ignorée. Donner le diagramme de classes avec les éléments de code utiles. Donner le code de configuration.
+
+Il faut comprendre dans cette question que la problématique porte sur le **contrôle** des déplacements des pièces, selon une référence (tour de rôles qui commence par les blancs). Il s'agit donc de vérifier que chaque coup joué est conforme. Pour cela, un proxy de JPlateau fait tout à fait l'affaire.
+
