@@ -52,3 +52,5 @@ Le diagramme suivant résume la proposition solvant la question 2 :
 
 Il faut comprendre dans cette question que la problématique porte sur le **contrôle** des déplacements des pièces, selon une référence (tour de rôles qui commence par les blancs). Il s'agit donc de vérifier que chaque coup joué est conforme. Pour cela, un proxy de JPlateau fait tout à fait l'affaire.
 
+Une petite modification est faite sur `JPlateau` pour le rendre générique vis à vis des `Piece` afin de pouvoir définir des 
+

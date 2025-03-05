@@ -1,0 +1,16 @@
+@startuml
+interface JPlateau {
+	Piece obtenir(Coordonnees coordonnees);
+	void deplacer(Coordonnees from, Coordonnees to);	
+}
+
+class EchiquierJoueurAdapter implements JPlateau {
+	+Piece obtenir(Coordonnees coordonnees);
+	+void deplacer(Coordonnees from, Coordonnees to);
+}
+class TourRoleEchecPlateauProxy implements JPlateau
+
+TourRoleEchecPlateauProxy --> "1 -realPlateau" JPlateau
+
+
+@enduml

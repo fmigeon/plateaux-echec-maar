@@ -1,38 +1,38 @@
 package jeu;
 
 import common.plateau.JPlateau;
+import echiquier.roles.Joueur;
 
 public class TourDeRoleEchec implements ATourDeRole {
 
-	private JeuEchec jeu;
-	private boolean lesBlancsJouent = true;
+	private JPlateau plateau;
+	private Tour tourPrecedent = Tour.NOIR;
+	private Tour tourCourant = Tour.BLANC;
 	private boolean premierTour = true;
 
 	@Override
-	public void tour() {
-		if (premierTour()) {
-			jeu.getJoueurBlanc().deplacer(null, null);
-			toggleJoueur();
-		} else {
-			JPlateau joueurCourant = tourDesBlancs() ? jeu.getJoueurBlanc() : jeu.getJoueurNoir();
-			joueurCourant.deplacer(null, null);
-		}
-		
-		
+	public boolean isTourValidated() {
+		return (isPremierTour() || isValidRoundRobin());
 		}
 
-	private boolean tourDesBlancs() {
-		// TODO Auto-generated method stub
-		return false;
+	private boolean isValidRoundRobin() {
+		return tourPrecedent!=tourCourant;
 	}
 
-	private boolean premierTour() {
-		return false;
+	private boolean isPremierTour() {
+		return premierTour;
 	}
 
 	private void toggleJoueur() {
-		lesBlancsJouent = !lesBlancsJouent;
 		premierTour = false;
+		Tour rr = tourPrecedent;
+		tourPrecedent = tourCourant;
+		tourCourant = rr;
 	}
 
+	protected void alterneTour() {
+		// TODO Auto-generated method stub
+		
+	}
+	
 }
